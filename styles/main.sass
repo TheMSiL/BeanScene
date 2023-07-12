@@ -1,0 +1,67 @@
+@import vars
+@import mixins
+
+.main
+	padding: $size20 0 215px
+	background-image: url('../img/main_bg.webp')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
+	color: $bright_white
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 1)
+	.header
+		max-width: $content_width
+		margin: $margin_center 170px
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		.nav_list
+			display: flex
+			align-items: center
+			gap: 60px
+
+			&-item
+				display: block
+				font-weight: 500
+				transition: all $ease500
+
+				&:hover
+					border-bottom: 1px solid $bright_white
+					transform: translateY(5px)
+
+		.authorize
+			&_signin
+				@include button(transparent,$bright_white )
+				margin-right: 35px
+				box-shadow: none
+				&:hover
+					box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22)
+					background: $secondary_color
+					color: $primary_color
+				&:active
+					background: $primary_color
+					color: $secondary_color
+
+			&_signout
+				@include button
+
+	&_content
+		max-width: $content_width
+		margin: $margin_center
+
+		&-subtitle
+			font-size: 22px
+			font-weight: 500
+
+		&-title
+			font-family: $second_font
+			font-size: 220px
+			font-weight: 400
+
+		&-text
+			@include section-text(0 0 40px 0, $bright_white)
+			max-width: 527px
+
+		&-btn
+			@include button($width: 134px)

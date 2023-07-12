@@ -1,0 +1,1 @@
+Welcome to our website, where you can experience the true coffee vibe. Our site offers an immersive coffee-themed experience, with interactive buttons and links throughout. The design is fully responsive, adapting seamlessly to different screen sizes, and is complemented by scroll animations, anchor links, and a scroll-to-top button.

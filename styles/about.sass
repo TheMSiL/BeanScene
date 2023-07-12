@@ -1,0 +1,38 @@
+@import vars
+@import mixins
+
+
+.about
+	padding: 70px 0 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	max-width: $content_width
+	margin: $margin_center
+	gap: 100px
+
+	&_content
+		max-width: 585px
+		animation-duration: 2s
+
+		&-title
+			@include section-heading(0 0 29px 0)
+
+		&-text
+			@include section-text(0 0 29px 0)
+
+		&-btn
+			@include button($width: 134px)
+
+.coffee_left
+	width: 450px
+	position: absolute
+	margin-top: -170px
+	z-index: -1
+
+.coffee_right
+	width: 450px
+	position: absolute
+	right: 0
+	margin-top: -170px
+	z-index: -1

@@ -1,0 +1,52 @@
+@import vars
+@import mixins
+
+.products
+	padding: 150px 0 106px
+	max-width: $content_width
+	margin: $margin_center
+	text-align: center
+
+	&_title
+		@include section-heading(0 0 16px 0)
+
+	&_subtitle
+		@include section-text(0 0 32px 0)
+
+	&_items
+		max-width: $content_width
+		margin: $margin_center
+		display: grid
+		grid-template-columns: repeat(4, 280px)
+		justify-content: space-between
+
+		&-item
+			position: relative
+			border: 1px solid rgba(249, 192, 106, 0.42)
+			background: $white_bg
+			padding-bottom: 42px
+			transition: $ease500
+
+			&:hover
+				box-shadow: 0px 6px 12px 0px rgba(248, 162, 33, 0.22)
+
+			&--title
+				margin-top: 14px
+				color: $primary_color
+				font-size: 22px
+				font-weight: bold
+
+			&--compound
+				margin: 6px 0
+				color: #1E1E1E
+
+			&--amount
+				font-size: 18px
+				color: $primary_color
+				font-weight: bold
+
+			&--btn
+				@include button($width: 134px)
+				position: absolute
+				left: 25%
+				bottom: -$size20

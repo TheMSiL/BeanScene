@@ -1,0 +1,55 @@
+@import vars
+@import mixins
+
+.advantages
+	padding-bottom: 82px
+	text-align: center
+
+	&_title
+		@include section-heading(0 0 16px 0)
+
+	&_subtitle
+		@include section-text(0 0 32px 0)
+
+	&_items
+		max-width: $content_width
+		margin: $margin_center 32px
+		display: grid
+		grid-template-columns: repeat(4, 280px)
+		justify-content: space-between
+
+		&-item
+			padding: 36px 0
+			border: 1px solid rgba(249, 192, 106, 0.42)
+			background: $white_bg
+			transition: $ease500
+
+			&:hover
+				box-shadow: 0px 6px 12px 0px rgba(105, 67, 9, 0.22)
+
+			&--title
+				color: $primary_color
+				font-size: 28px
+				font-weight: bold
+				margin: 25px 0 8px
+
+			&--text
+				color: $text_color
+				font-size: $size20
+				max-width: 176px
+				margin: $margin_center
+
+	&_join-text
+		color: $text_color
+		font-size: $size20
+		max-width: 580px
+		margin: $margin_center 24px
+		line-height: 50px
+
+		>span
+			color: $primary_color
+			font-size: 28px
+			font-weight: bold
+
+	&_join-btn
+		@include button($width: 134px)

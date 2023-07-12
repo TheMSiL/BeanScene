@@ -1,0 +1,52 @@
+@import vars
+@import mixins
+
+
+.subscribe
+	padding: 120px 0
+	text-align: center
+	background-image: url('../img/ordersubscribe.webp')
+	background-position: center
+	background-repeat: no-repeat
+	background-size: cover
+
+	&_title
+		@include section-heading(0 0 16px 0, $white)
+
+	&_subtitle
+		@include section-text(0 0 26px 0, $white)
+
+	&_form
+		max-width: 642px
+		margin: $margin_center
+		display: flex
+
+		&-input
+			width: 515px
+			padding: 16px 20px 16px 26px
+			border-radius: 4px
+			border: 1px solid rgba(249, 192, 106, 0.42)
+			background: $white_bg
+			color: rgba(0, 0, 0, 0.34)
+			font-size: $size20
+			line-height: 34px
+
+			&::placeholder
+				color: rgba(0, 0, 0, 0.34)
+
+		&-btn
+			@include button($width: 137px, $border-radius: 5px, $font-size: 22px)
+			padding: 19px 0
+			margin-left: -15px
+
+.cupL
+	position: absolute
+	left: 0
+	margin-top: -240px
+	z-index: 4
+
+.cupR
+	position: absolute
+	right: 0
+	margin-top: -240px
+	z-index: 4

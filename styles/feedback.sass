@@ -1,0 +1,79 @@
+@import vars
+@import mixins
+
+.feedback
+	padding: 82px 0 150px
+	max-width: $content_width
+	margin: $margin_center
+
+	&_R
+		position: absolute
+		right: 0
+		margin-top: -175px
+	&_L
+		position: absolute
+		left: 0
+		margin-top: -130px
+
+	&_title
+		@include section-heading(0 0 16px 0)
+		text-align: center
+
+	&_text
+		@include section-text(0 0 45px 0)
+		text-align: center
+
+	&_info
+		max-width: 980px
+		border: 1px solid rgba(249, 192, 106, 0.42)
+		background: $white_bg
+		padding: 50px 29px 100px 
+		margin: $margin_center
+
+		&-slider
+			position: relative
+
+			&--btnL
+				@include button($width: 82px, $border-radius: 25px)
+				position: absolute
+				top: 50%
+				left: -70px
+				height: 82px
+				z-index: 12
+
+			&--btnR
+				@include button($width: 82px, $border-radius: 25px)
+				position: absolute
+				top: 50%
+				right: -40px
+				height: 82px
+
+			&--content
+				max-width: 780px
+				margin: $margin_center
+				text-align: center
+				position: relative
+
+				&-text
+					color: $text_color
+					font-size: 18px
+					font-weight: 600
+					line-height: 36px
+					margin: 15px 0 28px
+
+				&-name
+					color: $primary_color
+					font-size: 32px
+					font-weight: bold
+					margin-bottom: 4px
+
+				&-pos
+					color: $text_color
+					font-size: $size20
+					line-height: 34px
+
+				>img
+					position: absolute
+					width: 150px
+					bottom: -170px
+					right: 40%

@@ -1,0 +1,41 @@
+@import vars
+@import mixins
+
+
+.order
+	position: relative
+	padding: 135px 0
+
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: url('../img/ordersubscribe.webp')
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		z-index: -1
+
+	&_title
+		@include section-heading(0 0 22px 0, $white)
+		max-width: 575px
+
+	&_text
+		@include section-text(0 0 22px 0, $white)
+		max-width: 409px
+
+	&_btn
+		@include button($width: 134px)
+
+	&_bean
+		position: absolute
+		right: 0
+		bottom: 0
+
+	&_cup
+		position: absolute
+		right: 160px
+		bottom: 35px
