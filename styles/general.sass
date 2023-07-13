@@ -1,6 +1,9 @@
 @import vars
 @import mixins
 
+html
+	overflow-x: hidden
+
 *
 	margin: 0
 	padding: 0
@@ -28,6 +31,10 @@ body
 
 	100%
 		transform: translateX(0%)
+
+.container
+	max-width: 2400px
+	margin: $margin_center
 
 .content
 	max-width: $content_width

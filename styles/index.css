@@ -1,3 +1,7 @@
+html {
+  overflow-x: hidden;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +36,11 @@ body {
     transform: translateX(0%);
   }
 }
+.container {
+  max-width: 2400px;
+  margin: 0 auto;
+}
+
 .content {
   max-width: 1500px;
   margin: 0 auto;
@@ -272,7 +281,6 @@ body {
   max-width: 1500px;
   margin: 0 auto;
   gap: 100px;
-  position: relative;
 }
 .about_content {
   max-width: 585px;
